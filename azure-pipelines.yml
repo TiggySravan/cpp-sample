@@ -8,6 +8,11 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
 steps:
 - task: NuGetToolInstaller@1
 
@@ -19,9 +24,9 @@ steps:
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
-    configuration: 'cpp-sample.sln'
+    configuration: '$(buildConfiguration)'
 
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
-    configuration: 'cpp-sample.sln'
+    configuration: '$(buildConfiguration)'
