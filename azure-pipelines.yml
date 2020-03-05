@@ -19,7 +19,7 @@ steps:
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
-    configuration: 'd:\a\1\s\$(solution)'
+    configuration: 'cpp-sample/cpp-sample.sln'
 
 - task: VSTest@2
   inputs:
