@@ -8,10 +8,6 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
-variables:
-  solution: '**/*.sln'
-
 steps:
 - task: NuGetToolInstaller@1
 
